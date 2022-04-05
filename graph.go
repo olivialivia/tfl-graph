@@ -9,22 +9,6 @@ import (
 	"sort"
 )
 
-// Task: Write a program that can tell you how to travel from A to B
-// on the London Underground. Specify the start/end stations on the terminal
-// E.g go run main.go -start "Wimbledon" -dest "Stratford".
-
-// You need to parse the input stations on the terminal.
-// Use the 'flag' package to do this. You need a flag for 'start' and 'destination'.
-
-// You need data which represents all the stop and connections on the london underground
-// I will supply this as a JSON file which you will need to read in Go.
-// Use the 'ioutil' package to read the files and 'encoding/json' package to parse the JSON.
-
-// You will need to walk the graph of stations from the start point to the possible
-// end point. You can do this using dijkstra's algorithm. Talk to me to do this.
-
-// Once you have the route, print it to the screen using the 'fmt' package.
-
 type Link struct {
 	Source string
 	Target string
@@ -171,9 +155,3 @@ Walk:
 	fmt.Printf("\n \n %v", string(res))
 }
 
-// *thing = dereference the pointer to the thing pointer -> value
-// & = take the address of this thing value -> pointer
-
-// * = a pointer to a thing ONLY when declaring a type
-// e.g var foo *string // pointer to a string
-// e.g func(foo *string) {}
